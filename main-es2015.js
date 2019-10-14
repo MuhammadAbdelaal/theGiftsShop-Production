@@ -49,19 +49,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/contact/contact.component.html":
-/*!**************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/contact/contact.component.html ***!
-  \**************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"my-5\">\n<p>contact works!</p>\n</section>");
-
-/***/ }),
-
 /***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/footer/footer.component.html":
 /*!************************************************************************************!*\
   !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/footer/footer.component.html ***!
@@ -84,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- header section start -->\n<header class=\"mt-5 pt-5 mb-3\">\n    <div class=\"container\">\n        <div class=\"row mainrow\">\n            <div class=\"col-lg-6 col-md-12 col-sm-12 col-12\">\n                <div class=\"one mb-4\">\n                    <img class=\"img-fluid\" src=\"assets/img/demo04_01_600x.jpg\" alt=\"\">\n                    <a class=\"d-block text-dark text-decoration-none\" routerLink=\"/products\">\n                        <div class=\"onetext text-center\">\n                            <h6>Assorted</h6>\n                            <h4>CATEGORIES</h4>\n                        </div>\n                    </a>\n                </div>\n\n            </div>\n            <div class=\"col-lg-6 col-md-12 col-sm-12 col-12\">\n                <div class=\"row\">\n                    <div class=\"col-6\">\n                        <div class=\"two mb-4\">\n                            <img class=\"img-fluid\" src=\"assets/img/demo04_02_300x.jpg\" alt=\"\">\n                            <a class=\"d-block text-dark text-decoration-none\" routerLink=\"/products\">\n                                <div class=\"twotext text-center\">\n                                    Women\n                                </div>\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"col-6\">\n                        <div class=\"three mb-4\">\n                            <img class=\"img-fluid\" src=\"assets/img/demo04_03_300x.jpg\" alt=\"\">\n\n                            <a class=\"d-block text-dark text-decoration-none\" routerLink=\"/products\">\n                                <div class=\"threetext text-center\">\n                                    Men\n                                </div>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <div class=\"col-12\">\n                        <div class=\"four\">\n                            <img class=\"img-fluid\" src=\"assets/img/demo04_04_600x.jpg\" alt=\"\">\n\n                            <a class=\"d-block text-dark text-decoration-none\" routerLink=\"/products\">\n                                <div class=\"fourtext text-center\">\n                                    <h6>A LOT OF</h6>\n                                    <h4>UNIQUE GIFTS</h4>\n                                </div>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</header>\n<!-- header section end -->\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"quickViewModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLongTitle\"\n    aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 col-12\">\n                        <img class='img-fluid' [src]=\"modalImage\" alt=\"\">\n                    </div>\n                    <div class=\"col-md-6 col-12 py-3\">\n                        <h3 class=\"modalDesc\"> {{modalDesc}}</h3>\n                        <p class=\"modalBrand card-text text-muted\">{{modalBrand}}</p>\n                        <h4>$<span class=\"product-price text-info\">{{modalPrice}}</span></h4>\n                        <p>{{modalLongDesc}}\n                        </p>\n                        <button class=\"btn btn-primary p-2\">\n                            <i class=\"fa fa-shopping-basket\"></i>\n                            Add to Cart\n                        </button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- Modal end -->\n\n<!-- recommended for men section start -->\n<section>\n    <div class=\"container py-2\">\n        <div class=\"row py-3\">\n            <h3 class=\"ml-3 text-primary\">Recommended for Men</h3>\n        </div>\n        <owl-carousel [options]=\"myCarouselOptions\" [carouselClasses]=\"['owl-theme', 'sliding']\">\n            <ng-container *ngFor='let product of products; index as productId'>\n                <div *ngIf='product.type == \"men\"' class=\"item\">\n                    <div id='product' class=\"card border-0 text-center\">\n                        <div class=\"product-top\">\n                            <div class=\"product-overlay\" \n                                (click)='setModalData(product.imgURL, product.price,\n                                product.brand, product.desc, product.longDesc )'\n                                aria-hidden=\"true\"\n                                data-toggle=\"modal\" data-target=\"#quickViewModal\">\n                                <i class=\"fa fa-eye\"></i>\n                            </div>\n                            <a [routerLink]=\"['/products', productId]\">\n                                <img class=\"card-img-top\" [src]=\"product.imgURL\" alt=\"\">\n                            </a>\n                        </div>\n                        <div class=\"card-body\">\n                            <p class=\"card-text text-muted\">{{product.brand}}</p>\n                            <span class=\"prodcut-review text-warning\">\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star-half-alt\"></i>\n                                <i class=\"far fa-star\"></i>\n                            </span>\n                            <h6 class=\"card-title font-weight-normal\">{{product.desc}}</h6>\n                            <div>$<span class=\"product-price text-info\">{{product.price}}</span></div>\n                            <div class=\"btn btn-primary p-2\">\n                                <i class=\"fa fa-shopping-basket\"></i>\n                                Add to Cart\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </ng-container>\n        </owl-carousel>\n    </div>\n</section>\n<!-- recommended for men section end -->\n\n<!-- recommended for women section start -->\n<section>\n    <div class=\"container py-2\">\n        <div class=\"row py-3\">\n            <h3 class=\"ml-3 text-primary\">Recommended for Women</h3>\n        </div>\n        <owl-carousel [options]=\"myCarouselOptions\" [carouselClasses]=\"['owl-theme', 'sliding']\">\n            <ng-container *ngFor='let product of products; index as productId'>\n                <div *ngIf='product.type == \"women\"' class=\"item\">\n                    <div id='product' class=\"card border-0 text-center\">\n                        <div class=\"product-top\">\n                            <div class=\"product-overlay\" \n                                (click)='setModalData(product.imgURL, product.price,\n                                product.brand, product.desc, product.longDesc )'\n                                aria-hidden=\"true\"\n                                data-toggle=\"modal\" data-target=\"#quickViewModal\">\n                                <i class=\"fa fa-eye\"></i>\n                            </div>\n                            <a [routerLink]=\"['/products', productId]\">\n                                <img class=\"card-img-top\" [src]=\"product.imgURL\" alt=\"\">\n                            </a>\n                        </div>\n                        <div class=\"card-body\">\n                            <p class=\"card-text text-muted\">{{product.brand}}</p>\n                            <span class=\"prodcut-review text-warning\">\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star-half-alt\"></i>\n                                <i class=\"far fa-star\"></i>\n                            </span>\n                            <h6 class=\"card-title font-weight-normal\">{{product.desc}}</h6>\n                            <div>$<span class=\"product-price text-info\">{{product.price}}</span></div>\n                            <div class=\"btn btn-primary p-2\">\n                                <i class=\"fa fa-shopping-basket\"></i>\n                                Add to Cart\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </ng-container>\n        </owl-carousel>\n    </div>\n</section>\n<!-- recommended for women section end -->\n\n<!-- pre-footer section start  -->\n<section class=\"pre-footer pt-5\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-6 col-12 pb-5\">\n                <div class=\"left\">\n                    <img class=\"img-fluid\" src=\"assets/img/demo04_05_600x.jpg\" alt=\"\">\n                    <a class=\"left-text d-block text-center text-decoration-none text-dark\" routerLink=\"/products\">\n                        <p>new in:</p>\n                        <h4>Clothing</h4>\n                    </a>\n                </div>\n            </div>\n            <div class=\"col-md-6 col-12  pb-5\">\n                <div class=\"left\">\n                    <img class=\"img-fluid\" src=\"assets/img/demo04_06_600x.jpg\" alt=\"\">\n                    <a class=\"left-text d-block text-center text-decoration-none text-dark\" routerLink=\"/products\">\n                        <p>clearance sales</p>\n                        <h4>get up to 20% off</h4>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<!-- pre-footer section end  -->");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- header section start -->\n<header class=\"mt-5 pt-5 mb-3\">\n    <div class=\"container\">\n        <div class=\"row mainrow\">\n            <div class=\"col-lg-6 col-md-12 col-sm-12 col-12\">\n                <div class=\"one mb-4\">\n                    <img class=\"img-fluid\" src=\"assets/img/demo04_01_600x.jpg\" alt=\"\">\n                    <a class=\"d-block text-dark text-decoration-none\" routerLink=\"/products\">\n                        <div class=\"onetext text-center\">\n                            <h6>Assorted</h6>\n                            <h4>CATEGORIES</h4>\n                        </div>\n                    </a>\n                </div>\n            </div>\n            <div class=\"col-lg-6 col-md-12 col-sm-12 col-12\">\n                <div class=\"row\">\n                    <div class=\"col-6\">\n                        <div class=\"two mb-4\">\n                            <img class=\"img-fluid\" src=\"assets/img/demo04_02_300x.jpg\" alt=\"\">\n                            <a class=\"d-block text-dark text-decoration-none\" routerLink=\"/products\">\n                                <div class=\"twotext text-center\">\n                                    Women\n                                </div>\n                            </a>\n                        </div>\n                    </div>\n                    <div class=\"col-6\">\n                        <div class=\"three mb-4\">\n                            <img class=\"img-fluid\" src=\"assets/img/demo04_03_300x.jpg\" alt=\"\">\n\n                            <a class=\"d-block text-dark text-decoration-none\" routerLink=\"/products\">\n                                <div class=\"threetext text-center\">\n                                    Men\n                                </div>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"row\">\n                    <div class=\"col-12\">\n                        <div class=\"four\">\n                            <img class=\"img-fluid\" src=\"assets/img/demo04_04_600x.jpg\" alt=\"\">\n\n                            <a class=\"d-block text-dark text-decoration-none\" routerLink=\"/products\">\n                                <div class=\"fourtext text-center\">\n                                    <h6>A LOT OF</h6>\n                                    <h4>UNIQUE GIFTS</h4>\n                                </div>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</header>\n<!-- header section end -->\n\n<!-- Modal -->\n<div class=\"modal fade\" id=\"quickViewModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"exampleModalLongTitle\"\n    aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <div class=\"row\">\n                    <div class=\"col-md-6 col-12\">\n                        <img class='img-fluid' [src]=\"modalImage\" alt=\"\">\n                    </div>\n                    <div class=\"col-md-6 col-12 py-3\">\n                        <h3 class=\"modalDesc\"> {{modalDesc}}</h3>\n                        <p class=\"modalBrand card-text text-muted\">{{modalBrand}}</p>\n                        <h4>$<span class=\"product-price text-info\">{{modalPrice}}</span></h4>\n                        <p>{{modalLongDesc}}\n                        </p>\n                        <button class=\"btn btn-primary p-2\">\n                            <i class=\"fa fa-shopping-basket\"></i>\n                            Add to Cart\n                        </button>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n<!-- Modal end -->\n\n<!-- recommended for men section start -->\n<section>\n    <div class=\"container py-2\">\n        <div class=\"row py-3\">\n            <h3 class=\"ml-3 text-primary\">Recommended for Men</h3>\n        </div>\n        <owl-carousel [options]=\"myCarouselOptions\" [carouselClasses]=\"['owl-theme', 'sliding']\">\n            <ng-container *ngFor='let product of products; index as productId'>\n                <div *ngIf='product.type == \"men\"' class=\"item\">\n                    <div id='product' class=\"card border-0 text-center\">\n                        <div class=\"product-top\">\n                            <div class=\"product-overlay\" \n                                (click)='setModalData(product.imgURL, product.price,\n                                product.brand, product.desc, product.longDesc )'\n                                aria-hidden=\"true\"\n                                data-toggle=\"modal\" data-target=\"#quickViewModal\">\n                                <i class=\"fa fa-eye\"></i>\n                            </div>\n                            <a [routerLink]=\"['/products', productId]\">\n                                <img class=\"card-img-top\" [src]=\"product.imgURL\" alt=\"\">\n                            </a>\n                        </div>\n                        <div class=\"card-body\">\n                            <p class=\"card-text text-muted\">{{product.brand}}</p>\n                            <span class=\"prodcut-review text-warning\">\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star-half-alt\"></i>\n                                <i class=\"far fa-star\"></i>\n                            </span>\n                            <h6 class=\"card-title font-weight-normal\">{{product.desc}}</h6>\n                            <div>$<span class=\"product-price text-info\">{{product.price}}</span></div>\n                            <div class=\"btn btn-primary p-2\">\n                                <i class=\"fa fa-shopping-basket\"></i>\n                                Add to Cart\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </ng-container>\n        </owl-carousel>\n    </div>\n</section>\n<!-- recommended for men section end -->\n\n<!-- recommended for women section start -->\n<section>\n    <div class=\"container py-2\">\n        <div class=\"row py-3\">\n            <h3 class=\"ml-3 text-primary\">Recommended for Women</h3>\n        </div>\n        <owl-carousel [options]=\"myCarouselOptions\" [carouselClasses]=\"['owl-theme', 'sliding']\">\n            <ng-container *ngFor='let product of products; index as productId'>\n                <div *ngIf='product.type == \"women\"' class=\"item\">\n                    <div id='product' class=\"card border-0 text-center\">\n                        <div class=\"product-top\">\n                            <div class=\"product-overlay\" \n                                (click)='setModalData(product.imgURL, product.price,\n                                product.brand, product.desc, product.longDesc )'\n                                aria-hidden=\"true\"\n                                data-toggle=\"modal\" data-target=\"#quickViewModal\">\n                                <i class=\"fa fa-eye\"></i>\n                            </div>\n                            <a [routerLink]=\"['/products', productId]\">\n                                <img class=\"card-img-top\" [src]=\"product.imgURL\" alt=\"\">\n                            </a>\n                        </div>\n                        <div class=\"card-body\">\n                            <p class=\"card-text text-muted\">{{product.brand}}</p>\n                            <span class=\"prodcut-review text-warning\">\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star\"></i>\n                                <i class=\"fas fa-star-half-alt\"></i>\n                                <i class=\"far fa-star\"></i>\n                            </span>\n                            <h6 class=\"card-title font-weight-normal\">{{product.desc}}</h6>\n                            <div>$<span class=\"product-price text-info\">{{product.price}}</span></div>\n                            <div class=\"btn btn-primary p-2\">\n                                <i class=\"fa fa-shopping-basket\"></i>\n                                Add to Cart\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </ng-container>\n        </owl-carousel>\n    </div>\n</section>\n<!-- recommended for women section end -->\n\n<!-- pre-footer section start  -->\n<section class=\"pre-footer pt-5\">\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-6 col-12 pb-5\">\n                <div class=\"left\">\n                    <img class=\"img-fluid\" src=\"assets/img/demo04_05_600x.jpg\" alt=\"\">\n                    <a class=\"left-text d-block text-center text-decoration-none text-dark\" routerLink=\"/products\">\n                        <p>new in:</p>\n                        <h4>Clothing</h4>\n                    </a>\n                </div>\n            </div>\n            <div class=\"col-md-6 col-12  pb-5\">\n                <div class=\"left\">\n                    <img class=\"img-fluid\" src=\"assets/img/demo04_06_600x.jpg\" alt=\"\">\n                    <a class=\"left-text d-block text-center text-decoration-none text-dark\" routerLink=\"/products\">\n                        <p>clearance sales</p>\n                        <h4>get up to 20% off</h4>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<!-- pre-footer section end  -->");
 
 /***/ }),
 
@@ -97,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- Navbar Start -->\n<nav class=\"navbar navbar-expand-lg fixed-top navbar-dark\">\n    <div class=\"container\">\n        <a class=\"navbar-brand\">The GiftsShop</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n            aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav ml-auto\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" routerLink=\"/home\" routerLinkActive=\"active\">Home</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" routerLink=\"/products\" routerLinkActive=\"active\">Products</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" routerLink=\"/contact\" routerLinkActive=\"active\">Contact</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link d-flex justify-elements-center align-items-center\" routerLink=\"/cart\"\n                        routerLinkActive=\"active\">\n                        <div id=\"cart-icon-div\">\n                            <i class=\"fas fa-shopping-cart\"></i>\n                            <span class='d-block text-center' id=\"cart-items\">0</span>\n                        </div>\n                    </a>\n                </li>\n                <li class=\"nav-item dropdown d-flex justify-elements-center align-items-center\">\n                    <a class=\"nav-link arrow-down dropdown-toggle\" id=\"dropdownId\" data-toggle=\"dropdown\"\n                        aria-haspopup=\"true\" aria-expanded=\"false\">\n                        <i id='user-image' class=\"far fa-user\"></i>\n                    </a>\n                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownId\">\n                        <a class=\"dropdown-item\">username</a>\n                        <a class=\"dropdown-item\">settings</a>\n                    </div>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>\n<!-- Navbar End -->");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- Navbar Start -->\n<nav class=\"navbar navbar-expand-lg fixed-top navbar-dark\">\n    <div class=\"container\">\n        <a class=\"navbar-brand\">The GiftsShop</a>\n        <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n            aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n            <span class=\"navbar-toggler-icon\"></span>\n        </button>\n\n        <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n            <ul class=\"navbar-nav ml-auto\">\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" routerLink=\"/home\" routerLinkActive=\"active\">Home</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link\" routerLink=\"/products\" routerLinkActive=\"active\">Products</a>\n                </li>\n                <li class=\"nav-item\">\n                    <a class=\"nav-link d-flex justify-elements-center align-items-center\" routerLink=\"/cart\"\n                        routerLinkActive=\"active\">\n                        <div id=\"cart-icon-div\">\n                            <i class=\"fas fa-shopping-cart\"></i>\n                            <span class='d-block text-center' id=\"cart-items\">0</span>\n                        </div>\n                    </a>\n                </li>\n                <li class=\"nav-item dropdown d-flex justify-elements-center align-items-center\">\n                    <a class=\"nav-link arrow-down dropdown-toggle\" id=\"dropdownId\" data-toggle=\"dropdown\"\n                        aria-haspopup=\"true\" aria-expanded=\"false\">\n                        <i id='user-image' class=\"far fa-user\"></i>\n                    </a>\n                    <div class=\"dropdown-menu\" aria-labelledby=\"dropdownId\">\n                        <a class=\"dropdown-item\">username</a>\n                        <a class=\"dropdown-item\">settings</a>\n                    </div>\n                </li>\n            </ul>\n        </div>\n    </div>\n</nav>\n<!-- Navbar End -->");
 
 /***/ }),
 
@@ -110,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"my-5\">\n<p>notfound works!</p>\n</section>");
+/* harmony default export */ __webpack_exports__["default"] = ("<section class=\"my-5 text-center\">\n    <img class=\"img-fluid d-block m-auto\" src=\"assets/img/404.jpg\" alt=\"\">\n    <a class=\"btn py-3 px-5 btn-outline-primary\" routerLink=\"/home\">{{ 'Go back to home page' | uppercase }}</a>\n</section>\n");
 
 /***/ }),
 
@@ -495,11 +482,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _products_products_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./products/products.component */ "./src/app/products/products.component.ts");
 /* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
 /* harmony import */ var _shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./shopping-cart/shopping-cart.component */ "./src/app/shopping-cart/shopping-cart.component.ts");
-/* harmony import */ var _contact_contact_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./contact/contact.component */ "./src/app/contact/contact.component.ts");
-/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
-/* harmony import */ var _notfound_notfound_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./notfound/notfound.component */ "./src/app/notfound/notfound.component.ts");
-/* harmony import */ var _product_detailes_product_detailes_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./product-detailes/product-detailes.component */ "./src/app/product-detailes/product-detailes.component.ts");
-
+/* harmony import */ var _footer_footer_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./footer/footer.component */ "./src/app/footer/footer.component.ts");
+/* harmony import */ var _notfound_notfound_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./notfound/notfound.component */ "./src/app/notfound/notfound.component.ts");
+/* harmony import */ var _product_detailes_product_detailes_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./product-detailes/product-detailes.component */ "./src/app/product-detailes/product-detailes.component.ts");
 
 
 
@@ -520,10 +505,9 @@ const routes = [
     { path: 'home', component: _home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"] },
     { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_10__["AboutComponent"] },
     { path: 'products', component: _products_products_component__WEBPACK_IMPORTED_MODULE_9__["ProductsComponent"] },
-    { path: 'contact', component: _contact_contact_component__WEBPACK_IMPORTED_MODULE_12__["ContactComponent"] },
     { path: 'cart', component: _shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_11__["ShoppingCartComponent"] },
-    { path: 'products/:productId', component: _product_detailes_product_detailes_component__WEBPACK_IMPORTED_MODULE_15__["ProductDetailesComponent"] },
-    { path: '**', component: _notfound_notfound_component__WEBPACK_IMPORTED_MODULE_14__["NotfoundComponent"] },
+    { path: 'products/:productId', component: _product_detailes_product_detailes_component__WEBPACK_IMPORTED_MODULE_14__["ProductDetailesComponent"] },
+    { path: '**', component: _notfound_notfound_component__WEBPACK_IMPORTED_MODULE_13__["NotfoundComponent"] },
 ];
 let AppModule = class AppModule {
 };
@@ -536,10 +520,9 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _products_products_component__WEBPACK_IMPORTED_MODULE_9__["ProductsComponent"],
             _about_about_component__WEBPACK_IMPORTED_MODULE_10__["AboutComponent"],
             _shopping_cart_shopping_cart_component__WEBPACK_IMPORTED_MODULE_11__["ShoppingCartComponent"],
-            _contact_contact_component__WEBPACK_IMPORTED_MODULE_12__["ContactComponent"],
-            _footer_footer_component__WEBPACK_IMPORTED_MODULE_13__["FooterComponent"],
-            _notfound_notfound_component__WEBPACK_IMPORTED_MODULE_14__["NotfoundComponent"],
-            _product_detailes_product_detailes_component__WEBPACK_IMPORTED_MODULE_15__["ProductDetailesComponent"]
+            _footer_footer_component__WEBPACK_IMPORTED_MODULE_12__["FooterComponent"],
+            _notfound_notfound_component__WEBPACK_IMPORTED_MODULE_13__["NotfoundComponent"],
+            _product_detailes_product_detailes_component__WEBPACK_IMPORTED_MODULE_14__["ProductDetailesComponent"]
         ],
         imports: [
             _angular_router__WEBPACK_IMPORTED_MODULE_4__["RouterModule"].forRoot(routes),
@@ -551,52 +534,6 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
     })
 ], AppModule);
-
-
-
-/***/ }),
-
-/***/ "./src/app/contact/contact.component.scss":
-/*!************************************************!*\
-  !*** ./src/app/contact/contact.component.scss ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbnRhY3QvY29udGFjdC5jb21wb25lbnQuc2NzcyJ9 */");
-
-/***/ }),
-
-/***/ "./src/app/contact/contact.component.ts":
-/*!**********************************************!*\
-  !*** ./src/app/contact/contact.component.ts ***!
-  \**********************************************/
-/*! exports provided: ContactComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactComponent", function() { return ContactComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-
-
-let ContactComponent = class ContactComponent {
-    constructor() {
-        window.scroll(0, 0); //prevent scrolling dowon as default behavior
-    }
-    ngOnInit() {
-    }
-};
-ContactComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-contact',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./contact.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/contact/contact.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./contact.component.scss */ "./src/app/contact/contact.component.scss")).default]
-    })
-], ContactComponent);
 
 
 
@@ -703,15 +640,15 @@ let HomeComponent = class HomeComponent {
                 }
             }
         };
-        window.scroll(0, 0); //prevent scrolling dowon as default behavior
+        window.scroll(0, 0); //prevent scrolling down as default behavior
         this.products = _ProductsService.products;
     }
-    setModalData(imagUrl, Price, Brand, Desc, LongDesc) {
+    setModalData(imagUrl, price, brand, desc, longDesc) {
         this.modalImage = imagUrl;
-        this.modalPrice = Price;
-        this.modalBrand = Brand;
-        this.modalDesc = Desc;
-        this.modalLongDesc = LongDesc;
+        this.modalPrice = price;
+        this.modalBrand = brand;
+        this.modalDesc = desc;
+        this.modalLongDesc = longDesc;
     }
     ngOnInit() {
     }
@@ -1077,7 +1014,7 @@ let ProductsComponent = class ProductsComponent {
         this.modalBrand = "";
         this.modalDesc = "";
         this.modalLongDesc = "";
-        window.scroll(0, 0); //prevent scrolling dowon as default behavior
+        window.scroll(0, 0); //prevent scrolling down as default behavior
         this.products = _ProductsService.products;
     }
     ngOnInit() {
@@ -1087,12 +1024,12 @@ let ProductsComponent = class ProductsComponent {
         this.menClicked = !this.menClicked;
         this.womenClicked = !this.womenClicked;
     }
-    setModalData(imagUrl, Price, Brand, Desc, LongDesc) {
+    setModalData(imagUrl, price, brand, desc, longDesc) {
         this.modalImage = imagUrl;
-        this.modalPrice = Price;
-        this.modalBrand = Brand;
-        this.modalDesc = Desc;
-        this.modalLongDesc = LongDesc;
+        this.modalPrice = price;
+        this.modalBrand = brand;
+        this.modalDesc = desc;
+        this.modalLongDesc = longDesc;
     }
 };
 ProductsComponent.ctorParameters = () => [
